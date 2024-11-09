@@ -9,6 +9,7 @@ public class Juego {
     private String trailer;
 
 
+    // Constructor que incluye 'tieneJuego'
     public Juego(int id, String nombre, String precio, String descripcion, String imagen, String trailer) {
         this.id = id;
         this.nombre = nombre;
@@ -17,14 +18,12 @@ public class Juego {
         this.imagen = imagen;
         this.trailer = trailer;
     }
-    public Juego(String nombre, String precio, String imagen) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.imagen = imagen;
-        this.descripcion = ""; // Valor predeterminado
-        this.trailer = "";     // Valor predeterminado
+
+    public Juego() {
+
     }
 
+    // Getters y setters para los campos
     public int getId() {
         return id;
     }
@@ -72,5 +71,6 @@ public class Juego {
     public void setTrailer(String trailer) {
         this.trailer = trailer;
     }
-}
 
+
+}

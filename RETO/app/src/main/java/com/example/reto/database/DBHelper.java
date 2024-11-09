@@ -15,7 +15,7 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "juegos.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 34;
 
 
     private static final String TABLE_JUEGOS = "juegos";
@@ -90,7 +90,26 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    @SuppressLint("Range")
+    public Juego obtenerJuegoPorId(int id) {
+        // Consulta para obtener el juego por ID
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query("juegos", null, "id = ?", new String[]{String.valueOf(id)}, null, null, null);
 
+        if (cursor != null && cursor.moveToFirst()) {
+            Juego juego = new Juego();
+            juego.setId(cursor.getInt(cursor.getColumnIndex("id")));
+            juego.setNombre(cursor.getString(cursor.getColumnIndex("nombre")));
+            juego.setDescripcion(cursor.getString(cursor.getColumnIndex("descripcion")));
+            // Configura los otros atributos del juego si es necesario
+
+            cursor.close();
+            return juego;
+        } else {
+            cursor.close();
+            return null; // Si no se encuentra el juego
+        }
+    }
     private void insertarDatosJuegos(SQLiteDatabase db) {
 
         String[][] juegos = {

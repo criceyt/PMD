@@ -28,6 +28,7 @@ public class TiendaActivity extends AppCompatActivity implements JuegoAdapter.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
 
+        // Configuración de RecyclerView
         recyclerViewJuegos = findViewById(R.id.recyclerViewJuegos);
         recyclerViewJuegos.setLayoutManager(new LinearLayoutManager(this));
 
@@ -35,15 +36,24 @@ public class TiendaActivity extends AppCompatActivity implements JuegoAdapter.On
         dbHelper = new DBHelper(this);
         cargarJuegos();
 
-        // Pasa "this" como el listener para los clics en los juegos
+        // Configuración del adaptador para los juegos
         juegoAdapter = new JuegoAdapter(juegosList, this, this);
         recyclerViewJuegos.setAdapter(juegoAdapter);
 
+        // Configuración del botón de logout
         buttonLogout = findViewById(R.id.btnLogout);
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logout();
+            }
+        });
+
+        // Configuración del botón de Biblioteca
+        findViewById(R.id.btnBiblioteca).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirBiblioteca();
             }
         });
     }
@@ -60,12 +70,25 @@ public class TiendaActivity extends AppCompatActivity implements JuegoAdapter.On
         finish();
     }
 
+    // Método para manejar el clic en un juego
     @Override
     public void onJuegoClick(Juego juego) {
 
         Intent intent = new Intent(TiendaActivity.this, JuegoDetalleActivity.class);
+
+
         intent.putExtra("COLUMN_JUEGO_ID", juego.getId());
+
+
+        startActivity(intent);
+    }
+
+
+    // Método para abrir la actividad de la Biblioteca
+    private void abrirBiblioteca() {
+        Intent intent = new Intent(TiendaActivity.this, BibliotecaActivity.class);
         startActivity(intent);
     }
 }
+
 
