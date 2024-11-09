@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@drawable/fondo_pmd">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_title"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="60dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/icono"
+            android:layout_marginBottom="40dp"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_dni"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editTextDni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/hint_dni"
+            android:inputType="text"
+            android:maxLength="9"
+            android:padding="12dp"
+            android:textColor="#737373"
+            android:textColorHint="#737373" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_email"
+            android:textColor="#D9D9D9"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="#737373"
+            android:textColorHint="#858585" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/hint_nombre"
+            android:textColor="#E4E1E1" />
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/hint_nombre"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#737373"
+            android:textColorHint="#737373" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/hint_password"
+            android:textColor="#D0CFCF" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#CCCCCC"
+            android:textColorHint="#858585" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_confirm_password"
+            android:textColor="#737373"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/hint_confirm_password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#737373"
+            android:textColorHint="#737373" />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#6A6868"
+            android:text="@string/button_register"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#6A6868"
+            android:text="@string/button_login"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
