@@ -14,7 +14,7 @@ import com.example.reto.database.modelo.Juego;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TiendaActivity extends AppCompatActivity {
+public class TiendaActivity extends AppCompatActivity implements JuegoAdapter.OnJuegoClickListener {
 
     private RecyclerView recyclerViewJuegos;
     private JuegoAdapter juegoAdapter;
@@ -32,18 +32,14 @@ public class TiendaActivity extends AppCompatActivity {
         recyclerViewJuegos.setLayoutManager(new LinearLayoutManager(this));
 
         juegosList = new ArrayList<>();
-
         dbHelper = new DBHelper(this);
-
         cargarJuegos();
 
-        juegoAdapter = new JuegoAdapter(juegosList, this);
+        // Pasa "this" como el listener para los clics en los juegos
+        juegoAdapter = new JuegoAdapter(juegosList, this, this);
         recyclerViewJuegos.setAdapter(juegoAdapter);
 
-
         buttonLogout = findViewById(R.id.btnLogout);
-
-
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,11 +54,18 @@ public class TiendaActivity extends AppCompatActivity {
     }
 
     private void logout() {
-
         Intent intent = new Intent(TiendaActivity.this, LoginActivity.class);
-
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-        finish(); 
+        finish();
+    }
+
+    @Override
+    public void onJuegoClick(Juego juego) {
+
+        Intent intent = new Intent(TiendaActivity.this, JuegoDetalleActivity.class);
+        intent.putExtra("COLUMN_JUEGO_ID", juego.getId());
+        startActivity(intent);
     }
 }
+
