@@ -18,7 +18,10 @@ public class Juego {
         this.imagen = imagen;
         this.trailer = trailer;
     }
-
+    public Juego(String nombre, String imagen){
+        this.nombre = nombre;
+        this.imagen = imagen;
+    }
     public Juego() {
 
     }

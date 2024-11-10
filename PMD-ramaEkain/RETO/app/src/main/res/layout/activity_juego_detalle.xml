@@ -175,7 +175,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="8dp"
+                >
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -188,6 +189,7 @@
                     android:textSize="12sp"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:id="@+id/btnTienda"

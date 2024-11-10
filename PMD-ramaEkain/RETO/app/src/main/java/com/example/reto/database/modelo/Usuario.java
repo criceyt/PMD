@@ -1,25 +1,28 @@
 package com.example.reto.database.modelo;
 
 public class Usuario {
-    private int id;
+    private String id;
     private String nombre;
     private String email;
     private String password;
 
 
-    public Usuario(int id, String nombre, String email, String password) {
+    public Usuario(String id, String nombre, String email, String password) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.password = password;
     }
 
+    public Usuario() {
+    }
 
-    public int getId() {
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

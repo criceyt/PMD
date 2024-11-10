@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center"
     android:layout_margin="8dp"
-    android:layout_weight="1">
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:padding="1dp">
 
-    <!-- Imagen del juego -->
-<ImageView
-android:id="@+id/imagenImageView"
-android:layout_width="100dp"
-android:layout_height="100dp"
-android:layout_marginBottom="8dp"
-android:src="@drawable/ic_launcher_foreground" />
+    <ImageView
+        android:id="@+id/imagenImageView"
+        android:layout_width="400dp"
+        android:layout_height="253dp"
+        android:src="@drawable/ic_launcher_foreground" />
 
+    <TextView
+        android:id="@+id/nombreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Nombre del Juego"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
-<TextView
-android:id="@+id/nombreTextView"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Nombre del Juego"
-android:textSize="16sp"
-android:gravity="center" />
-    </LinearLayout>
+</LinearLayout>
