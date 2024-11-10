@@ -1,0 +1,166 @@
+[
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_ic_biblioteca.png.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\ic_biblioteca.png"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\raw_skyrim.mp4.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\raw\\skyrim.mp4"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\raw_hollow_knight.mp4.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\raw\\hollow_knight.mp4"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\layout_activity_shop.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\layout\\activity_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\raw_league_of_legends.mp4.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\raw\\league_of_legends.mp4"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\layout_activity_juego_detalle.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\layout\\activity_juego_detalle.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_rounded_edittext.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\rounded_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_rounded_background.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\rounded_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "com.example.reto.app-debug-32:/layout_activity_shop.xml.flat",
+        "source": "com.example.reto.app-main-34:/layout/activity_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\raw_diablo4.mp4.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\raw\\diablo4.mp4"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-pngs-28:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_diablo4.jpg.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\diablo4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\raw_ark_survival_ascended.mp4.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\raw\\ark_survival_ascended.mp4"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_ark_survival_ascended.jpg.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\ark_survival_ascended.jpg"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\layout_activity_juego.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\layout\\activity_juego.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_ic_tienda.png.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\ic_tienda.png"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_hollow_knight.jpg.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\hollow_knight.jpg"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_skyrim.jpg.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\skyrim.jpg"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\layout_activity_biblioteca.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\layout\\activity_biblioteca.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_icono.png.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\icono.png"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_fondo_pmd.jpg.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\fondo_pmd.jpg"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_ic_perfil.png.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\ic_perfil.png"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\layout_item_biblioteca.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\layout\\item_biblioteca.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_league_of_legends.jpg.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\league_of_legends.jpg"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-debug-32:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\crice\\.gradle\\daemon\\8.7\\com.example.reto.app-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
+    }
+]
