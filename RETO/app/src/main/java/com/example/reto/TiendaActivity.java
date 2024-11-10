@@ -21,6 +21,8 @@ public class TiendaActivity extends AppCompatActivity {
     private List<Juego> juegosList;
     private DBHelper dbHelper;
     private Button buttonLogout;
+    private View btnEditarPerfil;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class TiendaActivity extends AppCompatActivity {
 
 
         buttonLogout = findViewById(R.id.btnLogout);
+        btnEditarPerfil = findViewById(R.id.btnPerfil);
 
 
         buttonLogout.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +53,15 @@ public class TiendaActivity extends AppCompatActivity {
                 logout();
             }
         });
+        btnEditarPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editarPerfil();
+            }
+        });
     }
+
+
 
     private void cargarJuegos() {
         juegosList.clear();
@@ -64,5 +75,10 @@ public class TiendaActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish(); 
+    }
+
+    private void editarPerfil(){
+        Intent intent = new Intent(TiendaActivity.this, PerfilActivity.class);
+        startActivity(intent);
     }
 }

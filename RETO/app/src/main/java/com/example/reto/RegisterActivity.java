@@ -16,7 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTitle("registrar");
+        setTitle("Registrar");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
@@ -38,20 +38,21 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = editTextPassword.getText().toString().trim();
                 String confirmPassword = editTextConfirmPassword.getText().toString().trim();
 
-
+                // Validaciones
                 if (TextUtils.isEmpty(dni) || TextUtils.isEmpty(email) || TextUtils.isEmpty(nombre) ||
                         TextUtils.isEmpty(password) || TextUtils.isEmpty(confirmPassword)) {
                     Toast.makeText(RegisterActivity.this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
                 } else if (!password.equals(confirmPassword)) {
                     Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
                 } else {
-
                     DBHelper dbHelper = new DBHelper(RegisterActivity.this);
+
+                    // Llamar al método registrarUsuario de DBHelper
                     boolean isRegistered = dbHelper.registrarUsuario(dni, email, nombre, password);
 
                     if (isRegistered) {
                         Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-
+                        // Si el registro es exitoso, ir a LoginActivity
                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(intent);
                         finish();
@@ -65,9 +66,11 @@ public class RegisterActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Si el usuario ya tiene cuenta, redirigir al login
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
     }
 }
+

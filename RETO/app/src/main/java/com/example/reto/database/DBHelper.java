@@ -5,7 +5,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.example.reto.database.modelo.Juego;
 
@@ -15,7 +17,7 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "juegos.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 35;
 
 
     private static final String TABLE_JUEGOS = "juegos";
@@ -32,6 +34,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String COLUMN_USUARIO_NOMBRE = "nombre";
     private static final String COLUMN_USUARIO_EMAIL = "email";
     private static final String COLUMN_USUARIO_PASSWORD = "password";
+    private static final String COLUMN_USUARIO_IMAGE = "imagen";
 
 
     private static final String TABLE_BIBLIOTECA = "biblioteca";
@@ -62,7 +65,8 @@ public class DBHelper extends SQLiteOpenHelper {
                 + "dni TEXT PRIMARY KEY, " // Usa dni como clave primaria
                 + COLUMN_USUARIO_NOMBRE + " TEXT NOT NULL, "
                 + COLUMN_USUARIO_EMAIL + " TEXT NOT NULL UNIQUE, "
-                + COLUMN_USUARIO_PASSWORD + " TEXT NOT NULL "
+                + COLUMN_USUARIO_PASSWORD + " TEXT NOT NULL, "
+                + COLUMN_USUARIO_IMAGE + " BLOB "
                 + ")";
         db.execSQL(createUsuariosTable);
 
@@ -79,15 +83,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
         insertarDatosJuegos(db);
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_BIBLIOTECA);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USUARIOS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_JUEGOS);
-        onCreate(db);
     }
 
 
@@ -115,13 +110,29 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public boolean verificarUsuario(String dni, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
+        Log.d("DBHelper", "Verificando usuario con DNI: " + dni + " y contraseña: " + password);
+
         String query = "SELECT * FROM usuarios WHERE dni = ? AND password = ?";
         Cursor cursor = db.rawQuery(query, new String[]{dni, password});
 
-        boolean valido = cursor.getCount() > 0;
+        boolean isValidUser = false;
+
+        if (cursor != null && cursor.moveToFirst()) {
+            Log.d("DBHelper", "Usuario encontrado en la base de datos");
+            isValidUser = true;
+        } else {
+            Log.d("DBHelper", "Usuario no encontrado en la base de datos");
+        }
+
         cursor.close();
         db.close();
-        return valido;
+        return isValidUser;
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS usuarios");
+        onCreate(db);
     }
 
 
@@ -186,5 +197,53 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return existe;
     }
+
+    public Cursor obtenerDatosUsuario(String dni) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query("usuarios", null, "dni=?", new String[]{dni}, null, null, null);
+        return cursor;
+    }
+
+    public void guardarImagenUsuario(String dni, byte[] imagenBytes) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_USUARIO_IMAGE, imagenBytes); // Guarda la imagen como BLOB
+
+        int rowsAffected = db.update(TABLE_USUARIOS, values, "dni = ?", new String[]{dni});
+        Log.d("DBHelper", "Filas afectadas al guardar imagen: " + rowsAffected);
+        db.close();
+    }
+
+    // Recuperar la imagen del usuario
+    public byte[] recuperarImagenDeUsuario(String dni) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] projection = {COLUMN_USUARIO_IMAGE};  // Asegúrate de que 'imagen' está en la lista de columnas
+        String selection = "dni = ?";
+        String[] selectionArgs = {dni};
+
+        Cursor cursor = db.query(TABLE_USUARIOS, projection, selection, selectionArgs, null, null, null);
+        byte[] imagen = null; // Inicializa como null por si no se encuentra imagen
+
+        if (cursor != null) {
+            try {
+                if (cursor.moveToFirst()) {
+                    int columnIndex = cursor.getColumnIndex(COLUMN_USUARIO_IMAGE);
+                    if (columnIndex != -1) {  // Verifica si el índice es válido
+                        imagen = cursor.getBlob(columnIndex);  // Recupera la imagen
+                        Log.d("DBHelper", "Imagen recuperada de la base de datos, tamaño: " + (imagen != null ? imagen.length : "null"));
+                    }
+                }
+            } finally {
+                cursor.close();  // Asegúrate de cerrar el cursor
+            }
+        }
+
+        db.close();
+        return imagen;  // Devuelve null si no hay imagen o si no se encontró el usuario
+    }
+
+
+
+
 
 }
