@@ -15,7 +15,7 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "juegos.db";
-    private static final int DATABASE_VERSION = 36;
+    private static final int DATABASE_VERSION = 41;
 
 
     private static final String TABLE_JUEGOS = "juegos";
@@ -135,6 +135,29 @@ public class DBHelper extends SQLiteOpenHelper {
 
             db.insert(TABLE_JUEGOS, null, values);
         }
+    }
+
+    // Método para verificar si el DNI ya está registrado
+    public boolean usuarioExisteDni(String dni) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_USUARIOS + " WHERE " + dni + " = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{dni});
+
+        boolean existe = cursor.getCount() > 0; // Si el cursor tiene filas, significa que el DNI ya existe
+        cursor.close();
+        db.close();
+        return existe;  // Devuelve true si el DNI ya existe
+    }
+
+    public boolean usuarioExisteCorreo(String dni) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_USUARIOS + " WHERE " + COLUMN_USUARIO_EMAIL + " = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{dni});
+
+        boolean existe = cursor.getCount() > 0; // Si el cursor tiene filas, significa que el DNI ya existe
+        cursor.close();
+        db.close();
+        return existe;  // Devuelve true si el DNI ya existe
     }
 
     public boolean verificarUsuario(String dni, String password) {

@@ -38,29 +38,30 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = editTextPassword.getText().toString().trim();
                 String confirmPassword = editTextConfirmPassword.getText().toString().trim();
 
-
+                // Verificar que todos los campos estén completos
                 if (TextUtils.isEmpty(dni) || TextUtils.isEmpty(email) || TextUtils.isEmpty(nombre) ||
                         TextUtils.isEmpty(password) || TextUtils.isEmpty(confirmPassword)) {
                     Toast.makeText(RegisterActivity.this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
                 } else if (!password.equals(confirmPassword)) {
                     Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
                 } else {
-
+                    // Usamos el DBHelper para verificar y registrar el usuario
                     DBHelper dbHelper = new DBHelper(RegisterActivity.this);
                     boolean isRegistered = dbHelper.registrarUsuario(dni, email, nombre, password);
 
                     if (isRegistered) {
                         Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-
                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(RegisterActivity.this, "Error al registrar. El DNI o el email ya están en uso.", Toast.LENGTH_SHORT).show();
+                        // Si el DNI o el correo ya están registrados, mostramos un mensaje de error
+                        Toast.makeText(RegisterActivity.this, "Error: El DNI o el correo electrónico ya están registrados.", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
+
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
